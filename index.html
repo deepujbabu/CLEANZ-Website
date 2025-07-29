@@ -229,7 +229,7 @@
             </div>
           </div><!-- End Team Member -->
 
-       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
                 <img src="assets/img/team/Kishalay.jpeg" class="img-fluid" alt="">
@@ -246,7 +246,7 @@
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
                 <img src="assets/img/team/Chandra.jpg" class="img-fluid" alt="">
@@ -263,7 +263,7 @@
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
                 <img src="assets/img/team/Narasimha.jpg" class="img-fluid" alt="">
@@ -280,7 +280,7 @@
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="350">
             <div class="team-member">
               <div class="member-img">
                 <img src="assets/img/team/Dshee.jpeg" class="img-fluid" alt="">
@@ -297,7 +297,7 @@
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="350">
             <div class="team-member">
               <div class="member-img">
                 <img src="assets/img/team/Atul.jpg" class="img-fluid" alt="">
@@ -314,7 +314,7 @@
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="700">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member">
               <div class="member-img">
                 <img src="assets/img/team/Sayak.png" class="img-fluid" alt="">
@@ -595,65 +595,115 @@
    <!--Gallery -->
    <section id="Gallery" class="portfolio section">
 
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Gallery</h2>
-    </div>
-  
-    <div class="container">
-      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-  
-        <!-- Portfolio Filters -->
-        <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">2025</li>
-          <!-- <li data-filter=".filter-product">2026</li>
-          <li data-filter=".filter-branding">2027</li> -->
-        </ul>
-  
-        <!-- Gallery Items for 2025 -->
-        <div class="row gy-4">
-  
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/Gallery/2025/MoU.jpeg" class="img-fluid" alt="MoU signing">
-              <div class="portfolio-info">
-                <h4>MoU signing</h4>
-                <p>07th March 2025</p>
+<style>
+  .carousel img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .portfolio-wrap {
+    position: relative;
+  }
+
+  .portfolio-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .portfolio-info h4 {
+    color: #00ffff; /* Light cyan for titles */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+</style>
+
+<section id="Gallery" class="portfolio section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Gallery</h2>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Column 1: MoU signing -->
+      <div class="col-md-6 mb-4">
+        <div class="portfolio-wrap">
+          <div id="mouCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/Gallery/2025/MoU.jpeg" alt="MoU signing 1">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Gallery/2025/MoU_1.jpeg" alt="MoU signing 2">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Gallery/2025/MoU_2.jpeg" alt="MoU signing 3">
               </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mouCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mouCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
           </div>
-  
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/Gallery/2025/MoU_1.jpeg" class="img-fluid" alt="MoU signing">
-              <div class="portfolio-info">
-                <h4>MoU signing</h4>
-                <p>07th March 2025</p>
-              </div>
-            </div>
+          <div class="portfolio-info">
+            <h4>MoU signing</h4>
+            <p>07th March 2025</p>
           </div>
-  
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/Gallery/2025/MoU_2.jpeg" class="img-fluid" alt="MoU signing">
-              <div class="portfolio-info">
-                <h4>MoU signing</h4>
-                <p>07th March 2025</p>
-              </div>
-            </div>
-          </div>
-  
         </div>
-        <!-- End of Gallery Row -->
-  
       </div>
+
+      <!-- Column 2: Logo unveiling -->
+      <div class="col-md-6 mb-4">
+        <div class="portfolio-wrap">
+          <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/Gallery/2025/Logo_unveiling_1.jpeg" alt="Logo unveiling 1">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Gallery/2025/Logo_unveiling_2.jpeg" alt="Logo unveiling 2">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Gallery/2025/Logo_unveiling_3.jpeg" alt="Logo unveiling 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#logoCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#logoCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          <div class="portfolio-info">
+            <h4>Logo unveiling</h4>
+            <p>07th March 2025</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+  
   <!-- End Portfolio Item -->
 
 
-   
+ 
 
     <!-- Openings -->
     <section id="Openings" class="section">
@@ -664,34 +714,107 @@
 
     <p style="text-align: justify;">
       CLEANZ invites applications from highly motivated individuals for the following research opportunities:
+    
     </p>
+    <h4 style="margin-top: 30px;">Postdoctoral Opportunities</h4>
+   <table style="border-collapse: collapse; width: 100%; border: 1px solid #000;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Topic</th>
+      <th style="border: 1px solid #000; padding: 8px;">Essential Eligibility</th>
+      <th style="border: 1px solid #000; padding: 8px;">Last Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Expired row 1 -->
+    <tr style="color: #cccccc;">
+      <td style="border: 1px solid #000; padding: 8px;">Enhanced Coalbed Methane Recovery</td>
+      <td style="border: 1px solid #000; padding: 8px;">Ph.D. with B.Tech./M.Tech equivalent in Chemical / Mechanical / Instrumentation / Materials / Metallurgical engineering</td>
+      <td style="border: 1px solid #000; padding: 8px;">21.07.2025</td>
+    </tr>
+    <!-- Expired row 2 -->
+    <tr style="color: #cccccc;">
+      <td style="border: 1px solid #000; padding: 8px;">Coal Supply Chain Optimization</td>
+      <td style="border: 1px solid #000; padding: 8px;">Ph.D. in Supply Chain Optimization / Operations Research / Industrial Engg / Combinatorial Optimization with BE/BTech/Equivalent in Chemical Engg / Metallurgical Engg / Mining Engg / Mechanical Engg / Electrical Engg / Computer Sc and Engg / Applied Mathematics</td>
+      <td style="border: 1px solid #000; padding: 8px;">21.07.2025</td>
+    </tr>
+    <!-- Active row 3 -->
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;"><a href="https://www.iith.ac.in/assets/files/careers/staff/CSIRO_Post%20doc_recruitemnt_iith_2025.pdf"target="_blank"style="color: darkblue; text-decoration: underline;">Assessment of CCUS Technology for Iron & Steelmaking</a></td>
+      <td style="border: 1px solid #000; padding: 8px;">
+        Ph.D. in Metallurgy / Materials Engineering / Chemical / Mechanical / Environmental / Civil Engineering with prior proven expertise in CCUS technologies or iron & steelmaking or sustainability / life cycle / exergy / environmental impact assessment of processes, etc.<br><br>
+        Minimum one publication in SCI / Scopus indexed journal.
+      </td>
+      <td style="border: 1px solid #000; padding: 8px;">31.07.2025</td>
+    </tr>
+    <!-- Active row 4 -->
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;"><a href="https://www.iith.ac.in/assets/files/careers/staff/Advertisement_for_Post-Doc_CIL_cleanz_coe_iith_2025.pdf"target="_blank"style="color: darkblue; text-decoration: underline;"> REE Extraction & Recovery</a></td>
+      <td style="border: 1px solid #000; padding: 8px;">
+        Ph.D. with BE/BTech/Equivalent in Chemical Engg / Metallurgical Engg / Materials Engg / Materials Science / Production Engg / Environmental Engg.<br><br>
+        <strong>or</strong><br><br>
+        Ph.D. with MSc in Chemistry / Environmental Science / equivalent with relevant research / industrial experience related to metal extraction / recycling / recovery processes.<br><br>
+        The experience will be cross-checked from the submitted documents (publications, PhD synopsis, etc.).
+      </td>
+      <td style="border: 1px solid #000; padding: 8px;">07.08.2025</td>
+    </tr>
+    <!-- Active row 5 -->
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;"><a href="https://www.iith.ac.in/assets/files/careers/staff/Post-doc-Adv_Cenosphere_project_2025_iith.pdf"target="_blank"style="color: darkblue; text-decoration: underline;"> Separation of cenospheres from ash and their potential application </a></td>
+      <td style="border: 1px solid #000; padding: 8px;">Ph.D. in Structural Engineering / Building Technology / Process Engineering / Chemical Engg / Industrial Engineering / Materials Engineering or other allied areas.</td>
+      <td style="border: 1px solid #000; padding: 8px;">07.08.2025</td>
+    </tr>
+    <!-- Active row 6 -->
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">Conversion of Low-grade Coal into Graphitic Carbon for Li-ion Batteries</td>
+      <td style="border: 1px solid #000; padding: 8px;">Ph.D. in Chemical Engg / Materials Science and Engg / Chemistry / Physics with thesis topic related to energy storage devices</td>
+      <td style="border: 1px solid #000; padding: 8px;">11.08.2025</td>
+    </tr>
+  </tbody>
+</table>
 
-    <p style="text-align: justify; margin-bottom: 0.5rem;">
-      <strong>Post-doctoral positions</strong>
-    </p>
 
-    <p style="text-align: justify;">
-      Currently, we have open post-doctoral positions in the following areas:
-    </p>
+<br>
 
-    <ul style="text-align: justify; padding-left: 1.2em;">
-      <li style="margin-bottom: 0.75rem;">
-        <strong style="color: #003366;">ECBMR</strong>: Detailed advertisement can be found 
-        <a href="assets/docs/postdoc-ecbmr.pdf" target="_blank">here</a>.
-      </li>
-      <li>
-        <strong style="color: #003366;">Coal supply chain optimization</strong>: Detailed advertisement can be found 
-        <a href="assets/docs/postdoc-coalsupply.pdf" target="_blank">here</a>.
-      </li>
-    </ul>
+<h4 style="margin-top: 30px;">JRF Positions</h4>
 
+<table style="border-collapse: collapse; width: 100%; border: 1px solid #000;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Topic</th>
+      <th style="border: 1px solid #000; padding: 8px;">Essential Eligibility</th>
+      <th style="border: 1px solid #000; padding: 8px;">Last Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;"><a href="https://www.iith.ac.in/assets/files/careers/staff/JRF_CIL_advertisement_2025_iith_msme.pdf"target="_blank"style="color: darkblue; text-decoration: underline;"> Recovery of Rare Earth Elements from Coal Sources </a></td>
+      <td style="border: 1px solid #000; padding: 8px;">
+        First class in ME/MTech/MS and BE/BTech/BS in Chemical / Metallurgy / Materials Engg / Materials Science / Mining Engg / Production Engg / Environmental Engg.
+      </td>
+      <td style="border: 1px solid #000; padding: 8px;">07.08.2025</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;"><a href="https://www.iith.ac.in/assets/files/careers/staff/JRF_advertisement_alufluoride-cleanz_coe_iith_2025.pdf"target="_blank"style="color: darkblue; text-decoration: underline;"> Characterization & Valorization of Silica & Lime Sludge of the Aluminum Fluoride Industry</a></td>
+      <td style="border: 1px solid #000; padding: 8px;">
+        First class in B.E. / B.Tech. in Metallurgy / Materials Science / Materials Engineering / Chemical / Environmental Engg with or without GATE score<br><br>
+        <strong>or</strong><br><br>
+        First class in M.E. / M.Tech. / M.S. in Metallurgy / Materials Science / Materials Engineering / Chemical / Environmental Engg
+      </td>
+      <td style="border: 1px solid #000; padding: 8px;">07.08.2025</td>
+    </tr>
+  </tbody>
+</table>
 
-    <p style="text-align: justify;">
+<br>
+
+    <!-- <p style="text-align: justify;">
       <strong>Ph.D. and M.Tech. Research Assistant (RA) positions</strong><br>
       We are looking for enthusiastic and dedicated individuals to join our diverse team to research in different areas related to CLEANZ. Available positions span over several departments, and we encourage applicants to apply to the department most relevant to their research interests. The following table shows the research area and the corresponding department to which the applicant can apply.
     </p>
 
-    <!-- Table -->
+    <!-- 
+    Table
     <div class="table-responsive">
       <table class="table table-bordered">
         <thead class="table-light">
@@ -760,7 +883,7 @@
 
           <!-- Address -->
           <div class="col-lg-4">
-            <div class="info-item d-flex flex-column align-items-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="info-item d-flex flex-column align-items-center" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-geo-alt mb-2" style="font-size: 2rem;"></i>
               <h3>Address</h3>
               <p>IIT Hyderabad <br> Telangana, 502 284</p>
