@@ -2065,6 +2065,18 @@ section,
   }
 }
 
+/* Default: scale logo reasonably on desktop */
+.logo img {
+  max-width: 350px;  /* adjust as per your navbar */
+  height: auto;
+}
+
+/* On tablets & smaller devices */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 150px; /* smaller for mobile */
+  }
+}
 
 
 /*--------------------------------------------------------------
