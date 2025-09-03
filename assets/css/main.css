@@ -2065,18 +2065,33 @@ section,
   }
 }
 
-/* Default: scale logo reasonably on desktop */
+/* Default: desktop (large screens) */
 .logo img {
-  max-width: 400px;  /* adjust as per your navbar */
+  max-width: 400px;
   height: auto;
 }
 
-/* On tablets & smaller devices */
-@media (max-width: 850px) {
+/* Tablets (e.g., iPad portrait/landscape) */
+@media (max-width: 1024px) {
   .logo img {
-    max-width: 250px; /* smaller for mobile */
+    max-width: 320px; /* a bit smaller but still visible */
   }
 }
+
+/* Small tablets & large phones */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 250px;
+  }
+}
+
+/* Small phones (like iPhone SE) */
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 180px;
+  }
+}
+
 
 
 /*--------------------------------------------------------------
