@@ -1,0 +1,781 @@
+/**
+* CLEANZ - Custom minimal restyle
+* Loaded after main.css to override the template toward a clean, Apple-style
+* minimal look using the CLEANZ brand palette.
+* Introduced: v1.2
+*/
+
+/* ============================================================
+   BRAND PALETTE + DESIGN TOKENS
+   ============================================================ */
+:root {
+  /* Brand palette */
+  --brand-teal: #8ACBD1;
+  --brand-green: #C7E1BF;
+  --brand-dgreen: #78B598;
+  --brand-lpurple: #C8C8D3;
+  --brand-dpurple: #9382B8;
+  --brand-pink: #E7A2C0;
+  --brand-red: #DE626E;
+  --brand-yellow: #F6C869;
+
+  /* Deeper green for interactive text/links/buttons (accessible contrast) */
+  --brand-accent: #3d8168;
+}
+
+:root {
+  /* Typography: Avenir first, then system stack for an Apple-like feel */
+  --default-font: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --nav-font: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Colours */
+  --background-color: #ffffff;
+  --default-color: #4b4b50;
+  --heading-color: #1d1d1f;
+  --accent-color: var(--brand-accent);
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  --nav-color: #1d1d1f;
+  --nav-hover-color: var(--brand-accent);
+  --nav-dropdown-color: #1d1d1f;
+  --nav-dropdown-hover-color: var(--brand-accent);
+}
+
+.light-background {
+  --background-color: #f5f8f6;
+  --surface-color: #ffffff;
+}
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.005em;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+}
+
+/* Section titles: drop the template's decorative lines */
+.section-title {
+  padding-bottom: 48px;
+}
+
+.section-title h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  color: var(--heading-color);
+  padding: 0;
+  margin: 0;
+  text-transform: none;
+}
+
+.section-title h2:before,
+.section-title h2:after {
+  display: none;
+}
+
+.section-title p {
+  color: #6e6e73;
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-top: 12px;
+}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.header {
+  background-color: rgba(255, 255, 255, 0.82);
+  background-image: linear-gradient(90deg, rgba(138, 203, 209, 0.16) 0%, rgba(199, 225, 191, 0.10) 50%, rgba(147, 130, 184, 0.16) 100%);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header .logo img {
+  max-height: 62px;
+}
+
+.navmenu a,
+.navmenu a:focus {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+}
+
+/* ============================================================
+   HERO (typographic + gradient)
+   ============================================================ */
+.hero {
+  min-height: 92vh;
+  background: #14232a;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:before {
+  display: none;
+}
+
+/* Soft brand-colour glows floating on the white background */
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.7;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-glow-1 {
+  width: 46vw;
+  height: 46vw;
+  top: -12vw;
+  left: -8vw;
+  background: radial-gradient(circle, var(--brand-teal) 0%, rgba(138, 203, 209, 0) 70%);
+  animation: heroFloat 14s ease-in-out infinite;
+}
+
+.hero-glow-2 {
+  width: 40vw;
+  height: 40vw;
+  bottom: -14vw;
+  right: -6vw;
+  background: radial-gradient(circle, var(--brand-dpurple) 0%, rgba(147, 130, 184, 0) 70%);
+  opacity: 0.58;
+  animation: heroFloat 18s ease-in-out infinite reverse;
+}
+
+.hero-glow-3 {
+  width: 34vw;
+  height: 34vw;
+  top: 30%;
+  right: 22%;
+  background: radial-gradient(circle, var(--brand-green) 0%, rgba(199, 225, 191, 0) 70%);
+  opacity: 0.62;
+  animation: heroFloat 20s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(2.5vw, -2vw); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow { animation: none; }
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+/* Kicker: "A Joint Initiative Of" label + linked-node names */
+.hero-kicker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.hero-kicker-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #8fb0b6;
+}
+
+.hero-kicker-names {
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #c5d3d6;
+}
+
+.hero-kicker-names .hk-sep {
+  color: var(--brand-teal);
+  margin: 0 10px;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .hero-kicker-names {
+    font-size: 0.9rem;
+  }
+  .hero-kicker-names .hk-sep {
+    margin: 0 7px;
+  }
+}
+
+/* Gradient-filled wordmark (deeper, more saturated so it does not look washed out) */
+.hero h1.hero-wordmark {
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  background: linear-gradient(120deg, #8ACBD1 0%, #C7E1BF 50%, #C8C8D3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Scroll-down cue */
+.hero-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--brand-teal);
+  border: 1px solid rgba(138, 203, 209, 0.35);
+  font-size: 1.2rem;
+  z-index: 3;
+  animation: heroBounce 2.2s ease-in-out infinite;
+  transition: background 0.3s ease;
+}
+
+.hero-scroll:hover {
+  background: rgba(138, 203, 209, 0.12);
+  color: var(--brand-teal);
+}
+
+@keyframes heroBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll { animation: none; }
+}
+
+.hero .hero-tagline {
+  font-size: clamp(1.15rem, 2.6vw, 1.7rem);
+  font-weight: 600;
+  color: #e6edee;
+  margin-top: 1.1rem;
+  line-height: 1.35;
+}
+
+.hero .hero-subline {
+  font-size: 1rem;
+  color: #9fb0b3;
+  letter-spacing: 0.02em;
+  margin-top: 0.5rem;
+}
+
+.hero .icon-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 44px 30px;
+}
+
+.hero .icon-box .icon {
+  color: var(--brand-teal);
+}
+
+.hero .icon-box .title {
+  font-size: 20px;
+}
+
+.hero .icon-box .title a {
+  color: #ffffff;
+}
+
+.hero .icon-box .description {
+  color: #b9c6c9;
+  line-height: 1.6;
+}
+
+/* Lift instead of scale on hover, so cards do not overlap their neighbour */
+.hero .icon-box:hover {
+  transform: translateY(-6px);
+}
+
+/* ============================================================
+   CARDS: TEAM
+   ============================================================ */
+.team-member {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+}
+
+/* Cards must fill their column (square images are absolutely positioned, so
+   they no longer provide an intrinsic width to size the card). */
+.team .team-member {
+  width: 100%;
+}
+
+/* Uniform square photo area so all cards are equal height.
+   Padding-box square trick: robust everywhere, no aspect-ratio dependency. */
+.team .team-member .member-img {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.team .team-member .member-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.team-member .member-info h4 {
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+/* Names in charcoal instead of the green link colour */
+.team-member .member-info h4 a {
+  color: var(--heading-color);
+  transition: color 0.2s ease;
+}
+
+.team-member .member-info h4 a:hover {
+  color: #555b5f;
+}
+
+.team-member .member-info span {
+  color: #6e6e73;
+}
+
+/* ============================================================
+   ABOUT: DIMENSION CARDS
+   ============================================================ */
+.about-dimensions {
+  margin-top: 20px;
+}
+
+.dimension-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 4px solid var(--card-accent, var(--brand-dgreen));
+  border-radius: 16px;
+  padding: 30px 26px;
+  height: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dimension-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.09);
+}
+
+.dimension-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-size: 1.6rem;
+  color: var(--card-accent, var(--brand-dgreen));
+  background: color-mix(in srgb, var(--card-accent, var(--brand-dgreen)), transparent 86%);
+  margin-bottom: 18px;
+}
+
+.dimension-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 0 0 8px 0;
+}
+
+.dimension-card p {
+  font-size: 0.92rem;
+  color: #6e6e73;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ============================================================
+   RESEARCH: FOCUS CARDS + CROSS-CUTTING CHIPS
+   ============================================================ */
+.focus-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: 34px 28px 30px;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.focus-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--card-accent, var(--brand-dgreen));
+}
+
+.focus-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.10);
+}
+
+.focus-num {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--card-accent, var(--brand-dgreen));
+  opacity: 0.18;
+}
+
+.focus-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 1.7rem;
+  color: var(--card-accent, var(--brand-dgreen));
+  background: color-mix(in srgb, var(--card-accent, var(--brand-dgreen)), transparent 85%);
+  margin-bottom: 20px;
+}
+
+.focus-card h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 0 0 10px 0;
+}
+
+.focus-card p {
+  font-size: 0.94rem;
+  color: #6e6e73;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Cross-cutting themes chip row */
+.cross-cutting {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.cross-cutting h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 22px;
+}
+
+.topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.topic-chip {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--brand-accent);
+  background: #ffffff;
+  border: 1px solid color-mix(in srgb, var(--brand-dgreen), transparent 60%);
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.topic-chip:hover {
+  transform: translateY(-2px);
+  background: var(--brand-accent);
+  color: #ffffff;
+  border-color: var(--brand-accent);
+}
+
+.about .container p {
+  line-height: 1.75;
+}
+
+.about .container p {
+  line-height: 1.75;
+}
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.portfolio-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.portfolio-info h4 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact .row > [class*="col-"] {
+  display: flex;
+}
+
+.contact .info-item {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 36px 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact .info-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+.contact .info-item i {
+  color: var(--brand-dgreen);
+  background: color-mix(in srgb, var(--brand-dgreen), transparent 86%);
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.6rem !important;
+  margin-bottom: 16px;
+}
+
+.contact .info-item h3 {
+  font-weight: 600;
+  color: var(--heading-color);
+  font-size: 1.15rem;
+}
+
+.contact .info-item p,
+.contact .info-item a {
+  color: #6e6e73;
+}
+
+.contact .info-item a:hover {
+  color: var(--brand-accent);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+/* Dark footer to bookend the dark hero */
+.footer.light-background {
+  --background-color: #14232a;
+  background: #14232a;
+  color: #b9c6c9;
+}
+
+.footer .footer-sitename {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(120deg, #8ACBD1, #C7E1BF, #C8C8D3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.footer .footer-blurb {
+  color: #9fb0b3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 340px;
+}
+
+.footer .footer-links h4,
+.footer .footer-contact h4 {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer .footer-contact p,
+.footer .footer-contact strong,
+.footer .footer-contact span {
+  color: #b9c6c9;
+}
+
+.footer .footer-links ul a {
+  color: #c5d3d6;
+}
+
+.footer .footer-links ul a:hover {
+  color: var(--brand-teal);
+}
+
+.footer .copyright {
+  background-color: transparent;
+}
+
+/* Compact the footer: trim the stacked padding/blank space */
+.footer .footer-top {
+  padding-top: 40px;
+}
+
+.footer .copyright {
+  margin-top: 16px !important;
+  padding-top: 16px;
+  padding-bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer.light-background {
+  padding-bottom: 20px;
+}
+
+.footer .copyright,
+.footer .copyright p,
+.footer .credits {
+  color: #7f9298;
+}
+
+.footer .copyright .sitename,
+.footer .credits a {
+  color: #c5d3d6;
+}
+
+/* ============================================================
+   COHESIVE BRAND THEME (subtle, across sections)
+   ============================================================ */
+
+/* Small gradient accent bar under each section title */
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 22px auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--brand-teal), var(--brand-dgreen), var(--brand-dpurple));
+}
+
+/* Soft brand glows behind alternating sections (no blur filter, pure gradient) */
+#about,
+#Research,
+#Gallery,
+#contact {
+  position: relative;
+  overflow: hidden;
+}
+
+#about .container,
+#Research .container,
+#Gallery .container,
+#contact .container {
+  position: relative;
+  z-index: 1;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  top: -220px;
+  right: -160px;
+  background: radial-gradient(circle, rgba(138, 203, 209, 0.20), rgba(138, 203, 209, 0) 68%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#Research::before {
+  content: "";
+  position: absolute;
+  width: 640px;
+  height: 640px;
+  bottom: -240px;
+  left: -180px;
+  background: radial-gradient(circle, rgba(147, 130, 184, 0.16), rgba(147, 130, 184, 0) 68%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#Gallery::before {
+  content: "";
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  top: -200px;
+  left: -160px;
+  background: radial-gradient(circle, rgba(199, 225, 191, 0.28), rgba(199, 225, 191, 0) 68%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  bottom: -220px;
+  right: -150px;
+  background: radial-gradient(circle, rgba(138, 203, 209, 0.20), rgba(138, 203, 209, 0) 68%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Brand strip across the top of the footer */
+.footer {
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--brand-teal), var(--brand-dgreen), var(--brand-dpurple)) 1;
+}

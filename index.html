@@ -8,6 +8,18 @@
   <meta name="description" content="CLEANZ is a Centre of Excellence jointly established by IIT Hyderabad and Coal India Limited to develop innovative solutions for sustainable coal utilization and clean energy.">
   <meta name="keywords" content="clean coal, net zero, IIT Hyderabad, Coal India, sustainable energy, carbon capture">
 
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CLEANZ">
+  <meta property="og:title" content="CLEANZ - Centre of Excellence on Clean Coal Energy and Net Zero">
+  <meta property="og:description" content="A Centre of Excellence jointly established by IIT Hyderabad and Coal India Limited for sustainable coal utilization and clean energy.">
+  <meta property="og:url" content="https://cleanz.coe.iith.ac.in/">
+  <meta property="og:image" content="https://cleanz.coe.iith.ac.in/assets/img/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CLEANZ - Centre of Excellence on Clean Coal Energy and Net Zero">
+  <meta name="twitter:description" content="A Centre of Excellence jointly established by IIT Hyderabad and Coal India Limited for sustainable coal utilization and clean energy.">
+  <meta name="twitter:image" content="https://cleanz.coe.iith.ac.in/assets/img/logo.png">
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -21,11 +33,12 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom minimal restyle (loaded after main.css to override) -->
+  <link href="assets/css/custom.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -68,15 +81,27 @@
          SECTION 1: HERO (Home)
          ======================================== -->
     <section id="hero" class="hero section">
-      <img src="assets/img/main bkg.png" alt="CLEANZ Background" data-aos="fade-in" style="opacity: 0.8;">
+      <!-- Soft brand-colour glows on white -->
+      <span class="hero-glow hero-glow-1" aria-hidden="true"></span>
+      <span class="hero-glow hero-glow-2" aria-hidden="true"></span>
+      <span class="hero-glow hero-glow-3" aria-hidden="true"></span>
 
       <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-out">
-          <div class="col-xl-7 col-lg-9 text-center">
-            <h1>CLEANZ</h1>
-            <p>Centre of Excellence <br> on <br>Clean Coal Energy and Net Zero</p>
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-xl-8 col-lg-10 text-center">
+            <div class="hero-kicker">
+              <span class="hero-kicker-label">A Joint Initiative Of</span>
+              <span class="hero-kicker-names">IIT Hyderabad<span class="hk-sep">&middot;</span>Coal India Limited</span>
+            </div>
+            <h1 class="hero-wordmark">CLEANZ</h1>
+            <p class="hero-tagline">Centre of Excellence on Clean Coal Energy and Net Zero</p>
+            <p class="hero-subline">Advancing clean coal technologies and net-zero solutions for India</p>
           </div>
         </div>
+
+        <a href="#about" class="hero-scroll" aria-label="Scroll to About">
+          <i class="bi bi-chevron-down"></i>
+        </a>
 
         <div class="row gy-4 mt-5">
           <!-- Vision -->
@@ -84,7 +109,7 @@
             <div class="icon-box text-center">
               <div class="icon"><i class="bi bi-lightbulb"></i></div>
               <h4 class="title"><a href="#">Vision</a></h4>
-              <p class="description">To advance clean coal technologies and net-zero strategies, with a focus on the effective use of low-grade/rejected Indian coals, supporting India's transition to a sustainable and low-carbon energy future through responsible and innovative coal utilization.</p>
+              <p class="description">To advance clean coal technologies and net-zero strategies for the responsible use of India's low-grade coals, supporting a sustainable and low-carbon energy future.</p>
             </div>
           </div>
         
@@ -93,7 +118,7 @@
             <div class="icon-box text-center">
               <div class="icon"><i class="bi bi-bullseye"></i></div>
               <h4 class="title"><a href="#">Mission</a></h4>
-              <p class="description">To build national capacity in advanced coal technologies through training, knowledge dissemination, and infrastructure development for green technologies for coal utilization, carbon management, and circular economy</p>
+              <p class="description">To build national capacity in advanced coal technologies through training, knowledge dissemination, and shared research infrastructure, spanning clean utilization, carbon management, and the circular economy.</p>
             </div>
           </div>
         </div>
@@ -118,8 +143,51 @@
             CLEANZ is committed to promote the development of high-impact coal-based technologies by integrating advanced scientific approaches with real-world applications. The center aims to create scalable solutions for clean coal utilization, CO<sub>2</sub> management, and circular economy. By combining interdisciplinary expertise with strong industry-academia partnerships, CLEANZ aims to support the transition of coal-based energy systems in line with India's net-zero goals.
           </p>
                 
-          <div class="container text-center">
-            <img src="assets/img/CLEANZ dimensions.png" alt="CLEANZ Research Dimensions" style="max-width: 32%; height: auto;">
+          <div class="col-12 mt-3 about-dimensions" data-aos="fade-up">
+            <div class="row gy-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="dimension-card" style="--card-accent:#8ACBD1">
+                <div class="dimension-icon"><i class="bi bi-people-fill"></i></div>
+                <h4>IITH-CIL Collaboration</h4>
+                <p>A joint initiative of IIT Hyderabad and Coal India Limited.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+              <div class="dimension-card" style="--card-accent:#78B598">
+                <div class="dimension-icon"><i class="bi bi-flag-fill"></i></div>
+                <h4>Indian Coal (Atmanirbhar)</h4>
+                <p>Building self-reliance on India's own coal resources.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="dimension-card" style="--card-accent:#9382B8">
+                <div class="dimension-icon"><i class="bi bi-cpu-fill"></i></div>
+                <h4>Deep Tech Innovations</h4>
+                <p>Turning advanced science into real-world technology.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+              <div class="dimension-card" style="--card-accent:#E7A2C0">
+                <div class="dimension-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <h4>Skill Development</h4>
+                <p>Training and capacity building for the coal sector.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="dimension-card" style="--card-accent:#DE626E">
+                <div class="dimension-icon"><i class="bi bi-buildings-fill"></i></div>
+                <h4>National Facility</h4>
+                <p>Shared research infrastructure serving the country.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+              <div class="dimension-card" style="--card-accent:#F6C869">
+                <div class="dimension-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                <h4>Interdisciplinary Approach</h4>
+                <p>Expertise spanning engineering, chemistry and materials.</p>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -141,7 +209,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Saptarshi.png" class="img-fluid" alt="Prof. Saptarshi Majumdar">
+                <img src="assets/img/team/Saptarshi.png" class="img-fluid" alt="Prof. Saptarshi Majumdar" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.com/citations?user=mrHiONUAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
                 </div>
@@ -157,7 +225,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Raja.jpg" class="img-fluid" alt="Prof. Raja Banerjee">
+                <img src="assets/img/team/Raja.jpg" class="img-fluid" alt="Prof. Raja Banerjee" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.co.in/citations?user=gPbPQ5sAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://www.linkedin.com/in/raja-banerjee-9713427/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -174,7 +242,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Kishalay.jpeg" class="img-fluid" alt="Prof. Kishalay Mitra">
+                <img src="assets/img/team/Kishalay.jpeg" class="img-fluid" alt="Prof. Kishalay Mitra" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.com/citations?user=cpR7HPQAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://www.linkedin.com/in/kishalaymitra/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -191,7 +259,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Chandra.jpg" class="img-fluid" alt="Prof. Chandra Shekhar Sharma">
+                <img src="assets/img/team/Chandra.jpg" class="img-fluid" alt="Prof. Chandra Shekhar Sharma" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.com/citations?user=gkzBK0AAAAAJ&hl=en&oi=ao" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://x.com/Chans2k2" target="_blank"><i class="bi bi-twitter-x"></i></a>
@@ -209,7 +277,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Narasimha.jpg" class="img-fluid" alt="Prof. Narasimha Mangadoddy">
+                <img src="assets/img/team/Narasimha.jpg" class="img-fluid" alt="Prof. Narasimha Mangadoddy" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.co.in/citations?user=6coMbooAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://www.linkedin.com/in/mangadoddy-narasimha-4522611b/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -226,7 +294,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="350">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Dshee.jpeg" class="img-fluid" alt="Dr. Debaprasad Shee">
+                <img src="assets/img/team/Dshee.jpeg" class="img-fluid" alt="Dr. Debaprasad Shee" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.com/citations?user=hu3cTE8AAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://www.linkedin.com/in/debaprasad-shee-a15aa71b/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -243,7 +311,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="350">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Atul.jpg" class="img-fluid" alt="Dr. Atul Suresh Deshpande">
+                <img src="assets/img/team/Atul.jpg" class="img-fluid" alt="Dr. Atul Suresh Deshpande" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.co.in/citations?hl=en&user=Z0L48DwAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://www.linkedin.com/in/atul-deshpande-b086274/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -260,7 +328,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Sayak.png" class="img-fluid" alt="Dr. Sayak Banerjee">
+                <img src="assets/img/team/Sayak.png" class="img-fluid" alt="Dr. Sayak Banerjee" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.com/citations?user=cz5jkscAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://www.linkedin.com/in/sayakbanerjee/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -277,7 +345,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Venkat.png" class="img-fluid" alt="Dr. Venkata Rao Kotagiri">
+                <img src="assets/img/team/Venkat.png" class="img-fluid" alt="Dr. Venkata Rao Kotagiri" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.co.in/citations?user=aX7i9NsAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://x.com/kvraoiith?lang=en" target="_blank"><i class="bi bi-twitter-x"></i></a>
@@ -295,7 +363,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Pritha.png" class="img-fluid" alt="Dr. Pritha Chatterjee">
+                <img src="assets/img/team/Pritha.png" class="img-fluid" alt="Dr. Pritha Chatterjee" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.co.in/citations?user=aCIAFWsAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://www.linkedin.com/in/pritha-chatterjee-78188127/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -312,7 +380,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Deepu.jpg" class="img-fluid" alt="Dr. Deepu J. Babu">
+                <img src="assets/img/team/Deepu.jpg" class="img-fluid" alt="Dr. Deepu J. Babu" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.com/citations?user=gkTKAQcAAAAJ&hl=en&oi=ao" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://x.com/deepujbabu?lang=en" target="_blank"><i class="bi bi-twitter-x"></i></a>
@@ -330,7 +398,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Meenakshi.png" class="img-fluid" alt="Dr. Meenakshi">
+                <img src="assets/img/team/Meenakshi.png" class="img-fluid" alt="Dr. Meenakshi" loading="lazy">
                 <div class="social">
                   <a href="https://scholar.google.com/citations?user=palLuFEAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
                   <a href="https://www.linkedin.com/in/meenakshi-s-b72b0069/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -343,19 +411,35 @@
             </div>
           </div>
 
-          <!-- Team Member: Dr. Ashok Kamaraj -->
+          <!-- Team Member: Dr. Gande Vamsi Vikram -->
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/Ashok.jpg" class="img-fluid" alt="Dr. Ashok Kamaraj">
+                <img src="assets/img/team/Vamsi.jpg" class="img-fluid" alt="Dr. Gande Vamsi Vikram" loading="lazy">
                 <div class="social">
-                  <a href="https://scholar.google.co.in/citations?user=VSkefMoAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
-                  <a href="https://www.linkedin.com/in/ashok-kamaraj/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                  <a href="mailto:vamsigande@che.iith.ac.in"><i class="bi bi-envelope"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4><a href="https://www.iith.ac.in/msme/ashokk/" target="_blank">Dr. Ashok Kamaraj</a></h4>
-                <span>Materials Science and Metallurgical Engineering</span>
+                <h4><a href="https://iith.ac.in/che/vamsigande/" target="_blank">Dr. Gande Vamsi Vikram</a></h4>
+                <span>Chemical Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member: Dr. D. V. Sai Praneeth -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="450">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/Praneeth.jpg" class="img-fluid" alt="Dr. D. V. Sai Praneeth" loading="lazy">
+                <div class="social">
+                  <a href="https://scholar.google.com/citations?user=cqsuRTMAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard"></i></a>
+                  <a href="mailto:praneeth.sai@ce.iith.ac.in"><i class="bi bi-envelope"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4><a href="https://iith.ac.in/ce/praneeth.sai/" target="_blank">Dr. D. V. Sai Praneeth</a></h4>
+                <span>Civil Engineering</span>
               </div>
             </div>
           </div>
@@ -374,13 +458,13 @@
       </div>
 
       <div class="container">
-        <div class="row gy-4 justify-content-center">
+        <div class="row gy-4 justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5">
 
           <!-- Staff Member: Mr. Abhishek Bhattacharya -->
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="col d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/staffs/Abhishek.jpg" class="img-fluid" alt="Mr. Abhishek Bhattacharya">
+                <img src="assets/img/team/staffs/Abhishek.jpg" class="img-fluid" alt="Mr. Abhishek Bhattacharya" loading="lazy">
                 <div class="social">
                   <a href="mailto:a.bhatya@cleanz.coe.iith.ac.in" target="_blank"><i class="bi bi-envelope"></i></a>
                 </div>
@@ -393,52 +477,68 @@
           </div>
 
           <!-- Staff Member: Ms. P. Naga Suma -->
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <div class="col d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/staffs/Suma.jpg" class="img-fluid" alt="Ms. P. Naga Suma">
+                <img src="assets/img/team/staffs/Suma_new.jpeg" class="img-fluid" alt="Ms. P. Naga Suma" loading="lazy">
                 <div class="social">
                   <a href="mailto:parapalli.suma@cleanz.coe.iith.ac.in" target="_blank"><i class="bi bi-envelope"></i></a>
                 </div>
               </div>
               <div class="member-info">
                 <h4>Ms. P. Naga Suma</h4>
-                <span>Project Associate</span>
+                <span>Project Associate (Admin)</span>
               </div>
             </div>
           </div>
 
-          <!-- Staff Member: Ms. Ashwini Kale -->
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+          <!-- Staff Member: Mr. Machkuri Nagaraju -->
+          <div class="col d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/staffs/Ashwini.jpg" class="img-fluid" alt="Ms. Ashwini Kale">
+                <img src="assets/img/team/staffs/Nagaraju.jpeg" class="img-fluid" alt="Mr. Machkuri Nagaraju" loading="lazy">
                 <div class="social">
-                  <a href="mailto:ashwini.kale@cleanz.coe.iith.ac.in" target="_blank"><i class="bi bi-envelope"></i></a>
+                  <a href="mailto:machkuri.nagaraj@admin.iith.ac.in" target="_blank"><i class="bi bi-envelope"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Ms. Ashwini Kale</h4>
-                <span>Project Associate</span>
+                <h4>Mr. Machkuri Nagaraju</h4>
+                <span>Project Associate (Finance)</span>
               </div>
             </div>
           </div>
 
-          <!-- Staff Member: Mr. Venu Yadav
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+          <!-- Staff Member: Mr. Bandari Mallesham -->
+          <div class="col d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/staffs/Venu.jpg" class="img-fluid" alt="Mr. Venu Yadav">
+                <img src="assets/img/team/staffs/Mallesham.jpeg" class="img-fluid" alt="Mr. Bandari Mallesham" loading="lazy">
                 <div class="social">
-                  <a href="mailto:venu.yadav@cleanz.coe.iith.ac.in" target="_blank"><i class="bi bi-envelope"></i></a>
+                  <a href="mailto:bandari.mallesham@cleanz.coe.iith.ac.in" target="_blank"><i class="bi bi-envelope"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Mr. Venu Yadav</h4>
+                <h4>Mr. Bandari Mallesham</h4>
                 <span>Project Assistant</span>
               </div>
             </div>
-          </div> -->
+          </div>
+
+          <!-- Staff Member: Mr. Nagavamshi Dinesh Kumar -->
+          <div class="col d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/staffs/Dinesh.jpeg" class="img-fluid" alt="Mr. Nagavamshi Dinesh Kumar" loading="lazy">
+                <div class="social">
+                  <a href="mailto:nagavamshi.dinesh@cleanz.coe.iith.ac.in" target="_blank"><i class="bi bi-envelope"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Mr. Nagavamshi Dinesh Kumar</h4>
+                <span>Junior Technical Assistant</span>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -447,35 +547,76 @@
     <!-- ========================================
          SECTION 5: RESEARCH
          ======================================== -->
-    <section id="Research" class="services section light-background">
+        <section id="Research" class="services section light-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Research</h2>
-        <div class="container">
-          <h6 style="text-align: justify;">The broad topics pursued in this CoE are:</h6>
-          <div class="row">
-            <div class="col-md-6">
-              <ul style="text-align: justify; list-style-position: inside;">
-                <li style="margin-bottom: 12px;">Enhanced Coal Bed Methane / Coal Mine Methane Recovery</li>
-                <li style="margin-bottom: 12px;">Carbon Capture Technologies</li>
-                <li style="margin-bottom: 12px;">Mineral Beneficiation, REE & Critical Minerals</li>
-                <li style="margin-bottom: 12px;">Gasification & Syngas Utilization</li>
-                <li style="margin-bottom: 12px;">Coal Liquefaction & Pyrolysis</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul style="text-align: justify; list-style-position: inside;">
-                <li style="margin-bottom: 12px;">Circular Economy and Waste Management</li>
-                <li style="margin-bottom: 12px;">AI/ML Applications</li>
-                <li style="margin-bottom: 12px;">Energy Efficiency and Conservation</li>
-                <li style="margin-bottom: 12px;">Development of Novel Carbon Materials</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <p>Focus areas of the Centre of Excellence</p>
       </div>
 
-      <div class="container text-center">
-        <img src="assets/img/Research/Cleanz Research.png" alt="CLEANZ Research Areas" style="max-width: 35%; height: auto;">
+      <div class="container">
+        <div class="row gy-4 focus-grid">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="focus-card" style="--card-accent:#8ACBD1">
+              <span class="focus-num">01</span>
+              <div class="focus-icon"><i class="bi bi-fire"></i></div>
+              <h4>Gasification, Syngas &amp; Pyrolysis</h4>
+              <p>Thermochemical routes that convert coal into cleaner fuels and chemicals.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
+            <div class="focus-card" style="--card-accent:#78B598">
+              <span class="focus-num">02</span>
+              <div class="focus-icon"><i class="bi bi-hexagon"></i></div>
+              <h4>Carbon Materials</h4>
+              <p>Value-added carbon products derived from coal and its byproducts.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="220">
+            <div class="focus-card" style="--card-accent:#9382B8">
+              <span class="focus-num">03</span>
+              <div class="focus-icon"><i class="bi bi-gem"></i></div>
+              <h4>Critical Minerals</h4>
+              <p>Recovery of rare-earth and critical elements from coal streams.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="280">
+            <div class="focus-card" style="--card-accent:#E7A2C0">
+              <span class="focus-num">04</span>
+              <div class="focus-icon"><i class="bi bi-cloud-haze2"></i></div>
+              <h4>Carbon Capture &amp; Utilization</h4>
+              <p>Capturing CO<sub>2</sub> and converting it into useful products.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="340">
+            <div class="focus-card" style="--card-accent:#DE626E">
+              <span class="focus-num">05</span>
+              <div class="focus-icon"><i class="bi bi-funnel"></i></div>
+              <h4>Coal Beneficiation</h4>
+              <p>Cleaning and upgrading low-grade Indian coals.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="focus-card" style="--card-accent:#F6C869">
+              <span class="focus-num">06</span>
+              <div class="focus-icon"><i class="bi bi-record-circle"></i></div>
+              <h4>Ash &amp; Cenosphere</h4>
+              <p>Utilising fly ash and cenospheres from coal combustion.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cross-cutting" data-aos="fade-up">
+          <h3>Cross-cutting themes</h3>
+          <div class="topic-chips">
+            <span class="topic-chip">Novel Carbon Materials</span>
+            <span class="topic-chip">Coal Liquefaction</span>
+            <span class="topic-chip">Circular Economy &amp; Waste Management</span>
+            <span class="topic-chip">AI / ML Applications</span>
+            <span class="topic-chip">Energy Efficiency &amp; Conservation</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -497,15 +638,23 @@
         .portfolio-info {
           position: absolute;
           bottom: 0;
-          background: rgba(0, 0, 0, 0.6);
+          background: linear-gradient(to top, rgba(15, 26, 31, 0.85), rgba(15, 26, 31, 0));
           color: #fff;
           width: 100%;
-          padding: 10px;
+          padding: 34px 12px 16px;
           text-align: center;
         }
 
         .portfolio-info h4 {
-          color: #00ffff;
+          color: #ffffff;
+          font-weight: 600;
+          margin-bottom: 4px;
+        }
+
+        .portfolio-info p {
+          color: #8ACBD1;
+          font-size: 0.85rem;
+          margin: 0;
         }
 
         .carousel-control-prev-icon,
@@ -528,13 +677,13 @@
               <div id="mouCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="assets/img/Gallery/2025/MoU.jpeg" alt="MoU signing 1">
+                    <img src="assets/img/Gallery/2025/MoU.jpeg" alt="MoU signing 1" loading="lazy">
                   </div>
                   <div class="carousel-item">
-                    <img src="assets/img/Gallery/2025/MoU_1.jpeg" alt="MoU signing 2">
+                    <img src="assets/img/Gallery/2025/MoU_1.jpeg" alt="MoU signing 2" loading="lazy">
                   </div>
                   <div class="carousel-item">
-                    <img src="assets/img/Gallery/2025/MoU_2.jpeg" alt="MoU signing 3">
+                    <img src="assets/img/Gallery/2025/MoU_2.jpeg" alt="MoU signing 3" loading="lazy">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#mouCarousel" data-bs-slide="prev">
@@ -557,13 +706,13 @@
               <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="assets/img/Gallery/2025/Logo_unveiling_1.jpeg" alt="Logo unveiling 1">
+                    <img src="assets/img/Gallery/2025/Logo_unveiling_1.jpeg" alt="Logo unveiling 1" loading="lazy">
                   </div>
                   <div class="carousel-item">
-                    <img src="assets/img/Gallery/2025/Logo_unveiling_2.jpeg" alt="Logo unveiling 2">
+                    <img src="assets/img/Gallery/2025/Logo_unveiling_2.jpeg" alt="Logo unveiling 2" loading="lazy">
                   </div>
                   <div class="carousel-item">
-                    <img src="assets/img/Gallery/2025/Logo_unveiling_3.jpeg" alt="Logo unveiling 3">
+                    <img src="assets/img/Gallery/2025/Logo_unveiling_3.jpeg" alt="Logo unveiling 3" loading="lazy">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#logoCarousel" data-bs-slide="prev">
@@ -619,7 +768,7 @@
             </div>
           </div>
         
-          <!-- Call Us -->
+          <!-- Call Us (hidden until a phone number is available)
           <div class="col-lg-4">
             <div class="info-item d-flex flex-column align-items-center" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-telephone mb-2" style="font-size: 2rem;"></i>
@@ -627,6 +776,8 @@
               <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
             </div>
           </div>
+          -->
+
         
           <!-- Email Us -->
           <div class="col-lg-4">
@@ -649,23 +800,34 @@
   <footer id="footer" class="footer light-background">
     <div class="container footer-top">
       <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
+        <div class="col-lg-4 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">CLEANZ</span>
+            <span class="sitename footer-sitename">CLEANZ</span>
           </a>
-          <div class="social-links d-flex mt-4"></div>
+          <p class="mt-3 footer-blurb">Centre of Excellence on Clean Coal Energy and Net Zero, an IIT Hyderabad and Coal India Limited initiative.</p>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful External Links</h4>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#Research">Research</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
+            <li><a href="#Openings">Openings</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>External Links</h4>
           <ul>
             <li><a href="https://www.iith.ac.in">IIT Hyderabad</a></li>
-            <li><a href="https://www.coalindia.in">CIL</a></li>
+            <li><a href="https://www.coalindia.in">Coal India Ltd</a></li>
             <li><a href="https://iith.ac.in/about/aboutiith/#reach">How to reach IITH</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-4 col-md-12 footer-contact text-center text-md-start">
+        <div class="col-lg-4 col-md-12 footer-contact text-center text-lg-start">
           <h4>Contact Us</h4>
           <p>Room 606, Chemical Engg. Block</p>
           <p>IIT Hyderabad</p>
@@ -680,7 +842,7 @@
       <p>© <span>Copyright</span> <strong class="px-1 sitename">CLEANZ</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> <br>
-        Updated on: January 2026
+        Version 2 &middot; Updated July 2026
       </div>
     </div>
   </footer>
@@ -699,13 +861,7 @@
        ======================================== -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
